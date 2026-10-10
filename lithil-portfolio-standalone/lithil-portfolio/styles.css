@@ -1140,3 +1140,7 @@
 @media (width <= 1100px) { .portrait-scene { width: 260px; height: 312px; top: 135px; right: 35px; } }
 @media (width <= 850px) { .portrait-scene { width: 215px; height: 260px; top: 150px; right: 24px; } }
 @media (width <= 640px) { .portrait-scene { width: 220px; height: 255px; inset: auto auto 70px 50%; margin-left: -110px; transform: none; } }
+
+
+/* Warm dark-chocolate portrait border */
+.portrait-image { border: 2px solid #4B3026; }
