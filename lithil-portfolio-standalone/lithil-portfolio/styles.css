@@ -1165,8 +1165,8 @@
 .hero-bottom .tech-strip > span:nth-child(6) { animation-delay: -3.5s; }
 .hero-bottom .tech-strip > span:nth-child(7) { animation-delay: -4.2s; }
 @keyframes skill-float {
-  0%, 100% { transform: translateY(12px); }
-  50% { transform: translateY(-12px); }
+  0%, 100% { transform: translateY(14px); }
+  50% { transform: translateY(-18px); }
 }
 @media (prefers-reduced-motion: reduce) {
   .hero-bottom .tech-strip > span {
