@@ -1176,3 +1176,56 @@
     will-change: auto;
   }
 }
+
+
+/* Clearly visible skill badges floating bottom-to-top across the home hero */
+.hero-floating-skills {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+}
+.floating-skill {
+  position: absolute;
+  bottom: -72px;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--background) 88%, transparent);
+  color: var(--primary);
+  box-shadow: 0 8px 24px rgba(34, 24, 18, 0.10);
+  font: 700 16px/1 'Manrope', sans-serif;
+  animation: skill-icon-rise 12s linear infinite;
+  will-change: transform, opacity;
+}
+.float-python { left: 8%; animation-delay: -1s; }
+.float-react { left: 24%; width: 42px; height: 42px; font-size: 27px; animation-delay: -7s; }
+.float-js { left: 43%; animation-delay: -4s; }
+.float-html { left: 62%; animation-delay: -10s; }
+.float-css { left: 78%; animation-delay: -2s; }
+.float-sql { left: 90%; width: 44px; height: 44px; animation-delay: -8s; }
+.float-git { left: 34%; width: 40px; height: 40px; animation-delay: -11s; }
+@keyframes skill-icon-rise {
+  0% { transform: translate3d(0, 0, 0) rotate(-8deg); opacity: 0; }
+  10% { opacity: .82; }
+  50% { transform: translate3d(24px, -360px, 0) rotate(8deg); opacity: .9; }
+  90% { opacity: .78; }
+  100% { transform: translate3d(-12px, -760px, 0) rotate(-5deg); opacity: 0; }
+}
+@media (width <= 640px) {
+  .floating-skill { width: 36px; height: 36px; border-radius: 10px; font-size: 12px; }
+  .float-python { left: 5%; }
+  .float-react { left: 82%; }
+  .float-js { left: 90%; }
+  .float-html { left: 8%; }
+  .float-css { left: 85%; }
+  .float-sql { left: 72%; }
+  .float-git { left: 14%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-floating-skills { display: none; }
+}
