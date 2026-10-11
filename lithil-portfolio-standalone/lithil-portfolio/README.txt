@@ -8,8 +8,8 @@ Files:
   certification.html, contact.html: Portfolio pages
 - styles.css: Complete styling, layout, transitions, and animations
 - script.js: Mobile menu and contact email draft
-- assets/: Your portrait, resume image, project illustration, icon, and local fonts
+- assets/: Your portrait, downloadable resume PDF, resume image, project illustration, icon, and local fonts
 
 Keep these files together. Upload the entire folder to any static website host.
 The contact form opens the visitor's configured email application; it does not
-send email directly. Your resume is provided in its original JPEG format.
+send email directly. The downloadable resume is assets/BhusaniLithil_FullStack.pdf. An additional resume image is included in assets/lithil-resume.jpeg.
