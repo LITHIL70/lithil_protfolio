@@ -1338,3 +1338,13 @@
 .hero .float-css { animation-delay: -2s !important; }
 .hero .float-sql { animation-delay: -8s !important; }
 .hero .float-git { animation-delay: -11s !important; }
+
+
+/* Keep the Expense Tracker project number clear of its dashboard heading. */
+.project-card:nth-child(2) .project-number {
+  top: 8px;
+  left: 8px;
+}
+.project-card:nth-child(2) .medical-window {
+  margin-top: 24px;
+}
