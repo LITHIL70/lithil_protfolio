@@ -1324,3 +1324,17 @@
     animation: nav-underline-live 1.6s linear infinite !important;
   }
 }
+
+
+/* Ensure floating skill icons remain visible and animated even when the
+   browser has a global reduced-motion override. */
+.hero .floating-skill {
+  animation: skill-icon-rise 14s linear infinite !important;
+}
+.hero .float-python { animation-delay: -1s !important; }
+.hero .float-react { animation-delay: -7s !important; }
+.hero .float-js { animation-delay: -4s !important; }
+.hero .float-html { animation-delay: -10s !important; }
+.hero .float-css { animation-delay: -2s !important; }
+.hero .float-sql { animation-delay: -8s !important; }
+.hero .float-git { animation-delay: -11s !important; }
