@@ -895,6 +895,8 @@
 .footer-inner .brand-symbol { font-size: 24px; }
 .footer-inner p { color: var(--muted-foreground); font-size: 10px; }
 .footer-right { color: var(--muted-foreground); align-items: center; gap: 18px; font-size: 10px; display: flex; }
+.footer-social { text-decoration: none; transition: color 0.2s ease; }
+.footer-social:hover, .footer-social:focus-visible { color: var(--primary); }
 .reveal { animation: 0.75s ease-out 0s 1 normal both running rise-in; }
 .reveal-delay { animation-delay: 0.15s; }
 @keyframes rise-in { 
