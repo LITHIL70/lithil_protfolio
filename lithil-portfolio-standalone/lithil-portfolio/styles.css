@@ -1310,3 +1310,25 @@
     background-position: 50% 0;
   }
 }
+
+
+/* Strong, clearly visible live underline animation */
+.nav-link[data-status="active"]::after {
+  animation: nav-underline-live 1.6s linear infinite !important;
+  background-size: 300% 100% !important;
+  box-shadow: 0 2px 9px rgba(242, 105, 49, 0.55);
+}
+.nav-link:hover::after {
+  animation: nav-underline-shimmer 650ms ease-out 1 !important;
+  background-size: 300% 100% !important;
+}
+@keyframes nav-underline-live {
+  0% { background-position: 100% 0; filter: brightness(1); }
+  50% { background-position: 0 0; filter: brightness(1.25); }
+  100% { background-position: -100% 0; filter: brightness(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nav-link[data-status="active"]::after {
+    animation: nav-underline-live 1.6s linear infinite !important;
+  }
+}
