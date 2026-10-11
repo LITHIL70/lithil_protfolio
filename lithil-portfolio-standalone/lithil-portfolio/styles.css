@@ -1196,16 +1196,8 @@
   .float-git { left: 14%; }
 }
 @media (prefers-reduced-motion: reduce) {
-  /* Keep the skills visible for reduced-motion users, without animating them. */
-  .hero-floating-skills { display: block; }
-  .floating-skill { animation: none; opacity: .9; bottom: auto; }
-  .float-python { top: 16%; }
-  .float-react { top: 48%; }
-  .float-js { top: 72%; }
-  .float-html { top: 22%; }
-  .float-css { top: 60%; }
-  .float-sql { top: 38%; }
-  .float-git { top: 82%; }
+  /* Keep the floating badges moving gently on all screen sizes. */
+  .floating-skill { animation-duration: 18s; }
 }
 
 
