@@ -1269,3 +1269,44 @@
   opacity: 1;
   box-shadow: none;
 }
+
+
+/* Live underline: a subtle moving highlight and warm pulse */
+.nav-link::after {
+  background: linear-gradient(
+    90deg,
+    var(--primary) 0%,
+    #ffb08a 45%,
+    var(--primary) 70%,
+    var(--primary) 100%
+  );
+  background-size: 220% 100%;
+}
+.nav-link[data-status="active"]::after {
+  animation: nav-underline-live 2.2s ease-in-out infinite;
+}
+.nav-link:hover::after {
+  animation: nav-underline-shimmer 900ms ease-out 1;
+}
+@keyframes nav-underline-live {
+  0%, 100% {
+    background-position: 100% 0;
+    box-shadow: 0 1px 4px rgba(242, 105, 49, 0.18);
+  }
+  50% {
+    background-position: 0 0;
+    box-shadow: 0 1px 8px rgba(242, 105, 49, 0.48);
+  }
+}
+@keyframes nav-underline-shimmer {
+  from { background-position: 100% 0; }
+  to { background-position: 0 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nav-link::after,
+  .nav-link:hover::after,
+  .nav-link[data-status="active"]::after {
+    animation: none;
+    background-position: 50% 0;
+  }
+}
